@@ -1,0 +1,92 @@
+.class public Lorg/spongycastle/crypto/generators/DESKeyGenerator;
+.super Lorg/spongycastle/crypto/CipherKeyGenerator;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 7
+    invoke-direct {p0}, Lorg/spongycastle/crypto/CipherKeyGenerator;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lorg/spongycastle/crypto/KeyGenerationParameters;)V
+    .locals 2
+
+    .line 20
+    invoke-super {p0, p1}, Lorg/spongycastle/crypto/CipherKeyGenerator;->a(Lorg/spongycastle/crypto/KeyGenerationParameters;)V
+
+    .line 22
+    iget p1, p0, Lorg/spongycastle/crypto/generators/DESKeyGenerator;->b:I
+
+    const/16 v0, 0x8
+
+    if-eqz p1, :cond_2
+
+    iget p1, p0, Lorg/spongycastle/crypto/generators/DESKeyGenerator;->b:I
+
+    const/4 v1, 0x7
+
+    if-ne p1, v1, :cond_0
+
+    goto :goto_0
+
+    .line 26
+    :cond_0
+    iget p1, p0, Lorg/spongycastle/crypto/generators/DESKeyGenerator;->b:I
+
+    if-eq p1, v0, :cond_1
+
+    .line 28
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "DES key must be 64 bits long."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    return-void
+
+    .line 24
+    :cond_2
+    :goto_0
+    iput v0, p0, Lorg/spongycastle/crypto/generators/DESKeyGenerator;->b:I
+
+    return-void
+.end method
+
+.method public a()[B
+    .locals 2
+
+    const/16 v0, 0x8
+
+    .line 36
+    new-array v0, v0, [B
+
+    .line 40
+    :cond_0
+    iget-object v1, p0, Lorg/spongycastle/crypto/generators/DESKeyGenerator;->a:Ljava/security/SecureRandom;
+
+    invoke-virtual {v1, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
+
+    .line 42
+    invoke-static {v0}, Lorg/spongycastle/crypto/params/DESParameters;->a([B)V
+
+    const/4 v1, 0x0
+
+    .line 44
+    invoke-static {v0, v1}, Lorg/spongycastle/crypto/params/DESParameters;->a([BI)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-object v0
+.end method

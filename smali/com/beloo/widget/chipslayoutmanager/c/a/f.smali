@@ -1,0 +1,17 @@
+.class final Lcom/beloo/widget/chipslayoutmanager/c/a/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/beloo/widget/chipslayoutmanager/c/a/d;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

@@ -1,0 +1,48 @@
+.class final synthetic Lkik/android/chat/vm/messaging/bn;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lrx/functions/g;
+
+
+# instance fields
+.field private final a:Lkik/core/themes/items/StyleIdentifier;
+
+
+# direct methods
+.method private constructor <init>(Lkik/core/themes/items/StyleIdentifier;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/vm/messaging/bn;->a:Lkik/core/themes/items/StyleIdentifier;
+
+    return-void
+.end method
+
+.method public static a(Lkik/core/themes/items/StyleIdentifier;)Lrx/functions/g;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/messaging/bn;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/vm/messaging/bn;-><init>(Lkik/core/themes/items/StyleIdentifier;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lkik/android/chat/vm/messaging/bn;->a:Lkik/core/themes/items/StyleIdentifier;
+
+    check-cast p1, Lkik/core/themes/items/c;
+
+    .line 2939
+    invoke-interface {p1, v0}, Lkik/core/themes/items/c;->a(Lkik/core/themes/items/StyleIdentifier;)Lkik/core/themes/items/b;
+
+    move-result-object p1
+
+    return-object p1
+.end method

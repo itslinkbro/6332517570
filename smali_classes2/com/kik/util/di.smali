@@ -1,0 +1,266 @@
+.class public final Lcom/kik/util/di;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field private static final a:Lorg/slf4j/b;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "ListUtils"
+
+    .line 23
+    invoke-static {v0}, Lorg/slf4j/c;->a(Ljava/lang/String;)Lorg/slf4j/b;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/kik/util/di;->a:Lorg/slf4j/b;
+
+    return-void
+.end method
+
+.method static synthetic a(Landroid/widget/AbsListView$LayoutParams;Landroid/view/View;Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    .line 76
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    iput p2, p0, Landroid/widget/AbsListView$LayoutParams;->height:I
+
+    .line 77
+    invoke-virtual {p1, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/widget/ListView;)V
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    .line 35
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 40
+    :try_start_0
+    const-class v0, Landroid/widget/ListView;
+
+    const-string v1, "mAreAllItemsSelectable"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    .line 41
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    .line 42
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    :cond_1
+    return-void
+.end method
+
+.method public static a(Landroid/widget/ListView;Landroid/view/View;)V
+    .locals 9
+
+    if-eqz p1, :cond_1
+
+    if-eqz p0, :cond_1
+
+    .line 67
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 68
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    instance-of v1, v1, Landroid/widget/AbsListView$LayoutParams;
+
+    if-eqz v1, :cond_0
+
+    .line 69
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/AbsListView$LayoutParams;
+
+    const-string v2, "alpha"
+
+    const/4 v3, 0x1
+
+    .line 71
+    new-array v4, v3, [F
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    aput v5, v4, v6
+
+    invoke-static {p1, v2, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    const-wide/16 v4, 0x96
+
+    .line 72
+    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    const/4 v4, 0x2
+
+    .line 73
+    new-array v5, v4, [I
+
+    aput v0, v5, v6
+
+    aput v6, v5, v3
+
+    invoke-static {v5}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v7, 0xfa
+
+    .line 74
+    invoke-virtual {v0, v7, v8}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    .line 75
+    invoke-static {v1, p1}, Lcom/kik/util/dj;->a(Landroid/widget/AbsListView$LayoutParams;Landroid/view/View;)Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 80
+    new-instance v1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    .line 81
+    new-array v4, v4, [Landroid/animation/Animator;
+
+    aput-object v2, v4, v6
+
+    aput-object v0, v4, v3
+
+    invoke-virtual {v1, v4}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
+
+    .line 82
+    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 83
+    new-instance v0, Lcom/kik/util/di$1;
+
+    invoke-direct {v0, p0, p1}, Lcom/kik/util/di$1;-><init>(Landroid/widget/ListView;Landroid/view/View;)V
+
+    invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 93
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
+
+    return-void
+
+    .line 97
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/widget/ListView;->removeHeaderView(Landroid/view/View;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public static b(Landroid/widget/ListView;)I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_1
+
+    .line 56
+    invoke-virtual {p0}, Landroid/widget/ListView;->getChildCount()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    .line 59
+    :cond_0
+    invoke-virtual {p0, v0}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 60
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    neg-int v1, v1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    mul-int v2, v2, v0
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
+
+    move-result p0
+
+    add-int/2addr v1, p0
+
+    return v1
+
+    :cond_1
+    :goto_0
+    return v0
+.end method

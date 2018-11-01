@@ -1,0 +1,33 @@
+.class public interface abstract Lkik/android/chat/vm/widget/af;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkik/android/chat/vm/cn;
+
+
+# virtual methods
+.method public abstract e()Lrx/d;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lrx/d<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract f()Lrx/d;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lrx/d<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract h()Ljava/lang/String;
+.end method
