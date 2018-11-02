@@ -21,8 +21,8 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="android_blue">#ff33b5e5</color>
     <color name="android_grey">#ff808080</color>
-    <color name="appbar_background">@color/gray_1</color>
-    <color name="appbar_text">@color/text_primary</color>
+    <color name="appbar_background">@color/a_windowbg</color>
+    <color name="appbar_text">@color/a_stxt</color>
     <color name="background_downstate_pressed">@color/light_gray</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
