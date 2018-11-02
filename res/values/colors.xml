@@ -155,8 +155,8 @@
     <color name="kinecosystem_transparent">#00000000</color>
     <color name="kinecosystem_white">#ffffffff</color>
     <color name="light_gray">#ffeeeeee</color>
-    <color name="light_theme_status_bar_color">#ffc5c6c7</color>
-    <color name="list_divider_color">@color/gray_2</color>
+    <color name="light_theme_status_bar_color">@color/a_statusbar</color>
+    <color name="list_divider_color">@color/divider</color>
     <color name="mask_bg">#80000000</color>
     <color name="material_blue">#ff2196f3</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -226,8 +226,8 @@
     <color name="smiley_notification_grey">#ffd9dce3</color>
     <color name="smiley_shadow_color">#140c445c</color>
     <color name="smiley_tray_overlay">@color/kik_code_username</color>
-    <color name="status_bar_grey">#ff999999</color>
-    <color name="status_bar_grey_v2">#3d37394b</color>
+    <color name="status_bar_grey">@color/a_statusbar</color>
+    <color name="status_bar_grey_v2">@color/a_statusbar</color>
     <color name="stripe_label_color">#ffb2b1b6</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
