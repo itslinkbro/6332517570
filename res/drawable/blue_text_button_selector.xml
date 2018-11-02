@@ -4,5 +4,5 @@
     <item android:state_selected="true" android:color="@color/blue_text_button_downstate" />
     <item android:state_pressed="true" android:color="@color/blue_text_button_downstate" />
     <item android:state_focused="true" android:color="@color/blue_text_button_downstate" />
-    <item android:color="@color/blue_text_button" />
+    <item android:color="@color/a_main" />
 </selector>
