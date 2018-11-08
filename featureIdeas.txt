@@ -1,0 +1,26 @@
+-make a custom list preference for different mods for example one that has empty preferences inside of it, splitting up the categories neatly or one with color circles allowing users to preview the colors for things such as theme changing. 
+
+-make a list preference that allows user to switch between chat layouts and onclick of an item it shows a preview of the screen and at the bottom it says apply 
+For example: 
+Title: 
+Stock Chat Screen
+Preview:
+Image of the layout
+Button at bottom right or top:
+Apply
+This could be done with something like a full screen dialog because it can be easily closed and full screen displayed
+
+-Color Picker Theme changer 
+Or maybe just hex input for first version then color picker for second
+
+-Reply button on notifications 
+
+-Toggle that enables a Reply button to the right of messages 
+
+-Chat organizer (Toggle that makes the chat list a tab view separating PMs and groups)
+
+-commands
+
+-make a button to the bottom right of all mods, a click able question mark that leads to a description of the mod
+
+-Hold down on chat background to get background options 
